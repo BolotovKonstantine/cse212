@@ -12,11 +12,15 @@ public static class Arrays
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
+        
+        //initialize result make sure to define lenght of array
         double[] result = new double[length];
+        // Cycle number make sure that first index of array is 0 and first multiple is 1
         for (int i = 0; i < length; i++)
         {
             result[i] = number * (i + 1);
         }
+        // return result
 
         return result; // replace this return statement with your own
     }
