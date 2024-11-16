@@ -1,4 +1,6 @@
-﻿/// <summary>
+﻿using System.Diagnostics;
+
+/// <summary>
 /// Maintain a Customer Service Queue.  Allows new customers to be 
 /// added and allows customers to be serviced.
 /// </summary>
@@ -14,6 +16,9 @@ public class CustomerService {
         // Scenario: 
         // Expected Result: 
         Console.WriteLine("Test 1");
+        var service = new CustomerService(0);
+        Trace.Assert(service._maxSize == 10,"Max size should be 10");
+        Console.WriteLine("Test 1 Passed");
 
         // Defect(s) Found: 
 
