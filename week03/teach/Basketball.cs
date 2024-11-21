@@ -27,7 +27,14 @@ public class Basketball
             var fields = reader.ReadFields()!;
             var playerId = fields[0];
             var points = int.Parse(fields[8]);
+            if (players.ContainsKey(playerId))
+                players[playerId] += points;
+            else
+                players[playerId] = points;
         }
+        List<int> scores = new List<int>(players.Values);
+        scores.Sort();
+        Console.WriteLine($"{scores}");
 
         Console.WriteLine($"Players: {{{string.Join(", ", players)}}}");
 
